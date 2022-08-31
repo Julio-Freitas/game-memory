@@ -140,8 +140,10 @@ function resetTheGame() {
   shufller();
 }
 (function shufller() {
+  const numberCards = [...cards].length;
   [...cards].forEach(({ style }) => {
-    const randomFlex = Math.floor(Math.random() * [...cards].length);
+    const randomFlex =
+      Math.floor(Math.random() * (numberCards - 1)) + numberCards;
     style.order = randomFlex;
   });
 })();
