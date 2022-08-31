@@ -1,5 +1,15 @@
 body {
   display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: monospace;
+  color: #d7d0dd;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  padding: 15px 0 0;
 }
 
 img,
@@ -115,7 +125,6 @@ img,
   position: absolute;
   left: 0;
   background-color: #599ab291;
-
   width: 0;
   height: 0;
   display: flex;
@@ -124,8 +133,8 @@ img,
   justify-content: center;
   gap: 20px;
   border-radius: 5px;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
   transition: ease-in-out 0.5s;
   background-image: url("../img/gif/bg.gif");
   background-size: cover;
@@ -137,6 +146,7 @@ img,
   font-family: monospace;
   color: #d7d0dd;
   font-weight: bold;
+  text-align: center;
 }
 
 @media screen and (max-width: 650px) {
@@ -159,10 +169,11 @@ img,
 @media screen and (max-width: 450px) {
   .memory-game {
     padding: 15px;
+    gap: 5px;
   }
 
   .memory-card {
-    width: 100%;
+    width: calc(100% / 2 - 5px);
     height: 150px;
   }
 }

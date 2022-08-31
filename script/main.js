@@ -83,11 +83,12 @@ function _fineshedTheGame(value) {
 }
 
 function _resultViewGameFineshed() {
+  window.scrollTo(0, 1);
   resultSceen.style.visibility = "visible";
   resultSceen.style.opacity = 1;
 
   resultSceen.style.width = "100%";
-  resultSceen.style.height = "calc(100% - 15px / 3)";
+  resultSceen.style.height = "calc(100vh - 15px / 3)";
 
   const text = document.createElement("p");
   const button = document.createElement("button");
